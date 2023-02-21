@@ -32,17 +32,22 @@
                     </div>
 
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">
-                                <div>Home</div>
-                            </a></li>
-                            <li class="nav__item"><a href="#about" class="nav__link">
+                        <li class="nav__item">
+                            <div onclick="document.body.scrollTop = 0;
+                            document.documentElement.scrollTop = 0;">
+                                <a href="#home" onclick="return false" class="nav__link active">
+                                    <div>Home</div>
+                                </a>
+                            </div>
+                            </li>
+                        <li class="nav__item"><a href="#about" class="nav__link">
                                 <div>About</div>
                             </a></li>
-                            <li class="nav__item"><a href="#works" class="nav__link">
+                        <li class="nav__item"><a href="#works" class="nav__link">
                                 <div>Works</div>
                             </a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">
-                                <div>Contactme</div>
+                                <div>Contact</div>
                             </a></li>
 
 
@@ -82,9 +87,9 @@
 
 
                     <div class="home__social">
-                        <a href=" https://github.com/chuikelvin" class="home__social-link bx bxl-github"></i></a>
-                        <a href="https://www.linkedin.com/in/kelvin-chui/"
-                            class="home__social-link bx bxl-linkedin"></i></a>
+                        <a href=" https://github.com/chuikelvin" target="_blank"><i class="home__social-link bx bxl-github"></i></a>
+                        <a href="https://www.linkedin.com/in/kelvin-chui/" target="_blank">
+                           <i class="home__social-link bx bxl-linkedin"></i></a>
                     </div>
 
                     <a download="Kelvin_Chui.pdf" href="/Kelvin_Chui.pdf" class="button home__button">Download
@@ -105,14 +110,14 @@
                         I am a Mechanical Engineering Technologist by training and a techie at heart. I love designing
                         and developing new ideas into final products and services. One of my prefered ways of doing this
                         is through programming which provides a near infinite canvas to build.
-                         <!-- things with functionality and even
+                        <!-- things with functionality and even
                         automation. -->
                         <br>
                         I love robotics, mechatronics and AI and all things tech.
 
                         <!-- I specialize in Frontend development, backend development and database development. -->
                         <br>
-                         Some of the technologies I am proficient in are but not limited to:
+                        Some of the technologies I am proficient in are but not limited to:
                     </p>
                     <div class="about__social">
                         <div class="about__tech"> <i class="about__icons bx bxl-python"></i> <span>Python</span></div>
@@ -178,6 +183,9 @@
 
             </div>
         </section>
+        <!-- <div id="hr" style="position: fixed;width: 100%;"><hr></div>
+        <div id="hr1" style="position: fixed;width: 100%;"><hr></div>
+        <div id="hr2" style="position: fixed;width: 100%;"><hr></div> -->
 
         <!--===== WORKS =====-->
         <section class="works section" id="works">
@@ -196,28 +204,32 @@
                     <div class="works__data">
                         <a href="https://plp-site-assignment.vercel.app/" target="_blank">
                             <i class="bx bx-link-alt works__link"></i>
-                        <span class="works__title">
-                            A Bootstrap assignment in Web Technologies at the Power Learn Project required us to create
-                            a PLP platform where facilitators and student could log in and view their progress. Despite
-                            being a design related assignment I decided to use Javascript to generate corresponding
-                            dummy data and incorporate sessionStorage to temporarily store it while the user was
-                            accessing the webpages.
-                        </span>
-                    </a>
+                            <span class="works__title">
+                                A Bootstrap assignment in Web Technologies at the Power Learn Project required us to
+                                create
+                                a PLP platform where facilitators and student could log in and view their progress.
+                                Despite
+                                being a design related assignment I decided to use Javascript to generate corresponding
+                                dummy data and incorporate sessionStorage to temporarily store it while the user was
+                                accessing the webpages.
+                            </span>
+                        </a>
                     </div>
                 </div>
 
                 <div class="works__img">
                     <div class="img__container">
-                    <img src="assets/img/store11.png" alt="Store11 preview">
+                        <img src="assets/img/store11.png" alt="Store11 preview">
                     </div>
                     <h3 class=" ">Store11 Ecommerce webapp</h3>
                     <div class="works__data">
                         <a href="https://thawing-springs-95517.herokuapp.com/" target="_blank">
-                                <i class="bx bx-link-alt works__link"></i>
+                            <i class="bx bx-link-alt works__link"></i>
                             <span class="works__title">
                                 Store11 is a fullstack ecommerce web app powered by Python Django.It features
-                                user login and sign up, an active store with products and related details stored in a database, add to cart functionality without login (checkout requires login), checkout and order placing with m-pesa daraja payment intergration among others.
+                                user login and sign up, an active store with products and related details stored in a
+                                database, add to cart functionality without login (checkout requires login), checkout
+                                and order placing with m-pesa daraja payment intergration among others.
                             </span>
 
                         </a>
@@ -234,20 +246,51 @@
 
             <div class="contact__container bg-grid">
                 <div class="contact__info">
-                    <h3 class="contact__subtitle">E-mail</h3>
-                    <div>
-                        <a href="mailto:chuikelvin2@gmail.com?" class="contact__text"><i
-                                class="home__social-link bx bx-envelope"></i> chuikelvin2@gmail.com</a>
+                    <h1 class="contact-title">Hey there <div class="wave">👋🏾</div> <br>
+                        Feel free to tell me about your project <br>
+                    </h1>
+                    <a href="mailto:chuikelvin2@gmail.com?" class="contact__text"><i
+                            class="home__social-link bx bx-envelope"></i> chuikelvin2@gmail.com</a>
+                    <h1 class="contact-text">or <br> connect with me via<br> 
+                        </h1> 
+                    <div class="contact__email">
+                        <!-- <h3 class="contact__subtitle">E-mail</h3> -->
+                        <!-- <div> -->
+
+                        <a href=" https://github.com/chuikelvin" target="_blank" class="contact__social-link" ><i class="home__social-link  bx bxl-github"></i>github</a>
+                        <a href="https://www.linkedin.com/in/kelvin-chui/" target="_blank" class="contact__social-link" >
+                            <i class="home__social-link bx bxl-linkedin"></i>
+                        linkedin</a>
                         <!-- <a href="mailto:chuikelvin2@gmail.com?">chuikelvin2@gmail.com</a> -->
+                        <!-- </div> -->
                     </div>
+
                 </div>
+                <!-- <div > -->
+                <form class="contact__form" action="mailto:chuikelvin2@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" name="fullname" id="" placeholder="Full Name *" required>
+                    <!-- <br> -->
+                    <input type="email" name="email" id="" placeholder="Email address *" required>
+                    <input type="text" name="subject" id="" placeholder="subject *" required>
+                    <textarea name="message" id="" cols="30" rows="4" placeholder="message *" required></textarea>
+                    <input type="submit" value="send message">
+                </form>
+                <!-- </div> -->
             </div>
         </section>
 
+        <!-- floating buttons -->
+        <div class="fixed">
+            <!-- <div class="theme-container shadow-dark"> -->
+            <div id="to_Top" onclick="document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;"> <i class='bx bx-up-arrow-alt'></i></div>
+            <!-- <a href="#home" onclick="document.body.scrollTop = 0;"><img id="theme-icon" src="./assets/img/moon2.svg" alt="ERR"></a> -->
+            <!-- </div> -->
 
 
-        <div class="theme-container shadow-dark">
-            <img id="theme-icon" src="./assets/img/moon2.svg" alt="ERR">
+            <div class="theme-container shadow-dark">
+                <img id="theme-icon" src="./assets/img/moon2.svg" alt="ERR">
+            </div>
         </div>
 
     </main>
@@ -260,13 +303,37 @@
     <script src="./assets/js/main.js"></script>
     <script>
         var target = document.getElementById("flipper");
+        var to_Top = document.getElementById("to_Top")
 
-        function getPoint() {
+        window.onscroll = function () { scrollFunction() };
 
-            target.classList.toggle("is-flipped");
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                to_Top.style.display = "block";
+            } else {
+                to_Top.style.display = "none";
+            }
         }
+
+        // function getPoint() {
+
+        //     target.classList.toggle("is-flipped");
+        //     target.classList.toggle("flip");
+        // }
         flipper.onclick = function (e) {
-            target.classList.toggle("is-flipped");
+            // target.classList.toggle("paused");
+            // console.log(target.style.webkitAnimationName);
+            target.style.webkitAnimationName = target.style.webkitAnimationName=="blue"? 
+            setTimeout(() => {
+                target.style.webkitAnimationName = "rumble"
+            }, 1220)
+                
+                :target.style.webkitAnimationName = "blue";
+            // console.log(target.style.webkitAnimationName);
+            setTimeout(() => {
+                target.classList.toggle("is-flipped");
+            }, 20);
+
 
         }
 
@@ -297,7 +364,7 @@
         // prefers-color-scheme
     </script>
 
-    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <!-- <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script> -->
 
     <script type="importmap">
         {
@@ -310,40 +377,40 @@
     <script type="module">
 
         import * as THREE from 'three';
-    const target=  document.getElementById("game")
+        const target = document.getElementById("game")
 
-    let rect = target.getBoundingClientRect();
+        let rect = target.getBoundingClientRect();
         // console.log(rect)
         // let tester= document.querySelector('.tester')
-    let width=rect.width
-    let height =rect.height
+        let width = rect.width
+        let height = rect.height
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(width, height);
-    target.appendChild(renderer.domElement);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(width, height);
+        target.appendChild(renderer.domElement);
 
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+        const geometry = new THREE.BoxGeometry(1, 1, 1);
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
 
-    camera.position.z = 5;
+        camera.position.z = 5;
 
-    function animate() {
-        requestAnimationFrame(animate);
+        function animate() {
+            requestAnimationFrame(animate);
 
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
 
-        renderer.render(scene, camera);
-    };
+            renderer.render(scene, camera);
+        };
 
-    animate();
+        animate();
 
-</script>
+    </script>
 </body>
 
 </html>

@@ -33,14 +33,26 @@ window.addEventListener('scroll', scrollActive);
 
 function scrollActive() {
     const scrollY =window.pageYOffset
-
+    var x = window.matchMedia("(max-width: 768px)")
+    // document.getElementById("hr1").style.top = scrollY+"px";
+    var sectionTop ;
     sections.forEach(current =>{
         const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop -50
+        if (x.matches) {
+          sectionTop = current.offsetTop -50
+        }else{
+          sectionTop = current.offsetTop -current.offsetHeight
+        }
+        
         sectionId =current.getAttribute('id')
+        // document.getElementById("hr").style.top = sectionHeight+"px"
+        // document.getElementById("hr2").style.top = sectionTop+"px"
+        // console.log(sectionHeight);
 
         if (scrollY > sectionTop && scrollY <= sectionTop+sectionHeight){
             document.querySelector('.nav__menu a[href*='+ sectionId+']').classList.add('active')
+            // console.log(scrollY);
+            // console.log(sectionTop);
         }else{
             document.querySelector('.nav__menu a[href*='+ sectionId+']').classList.remove('active')
         }

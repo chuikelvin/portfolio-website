@@ -178,13 +178,15 @@
 .img__container img{
     /* height: 300px; */
     width:100%;
+    /* aspect-ratio: 16 / 9; */
   }
-iframe, .img__container video{
+iframe, .img__container video,.img__container .img{
     /* height: 300px; */
     /* padding: 20px;
     margin: 2px; */
     width:100%;
     aspect-ratio: 16 / 9;
+    overflow: hidden;
   }
 .works__video{
     display: none;

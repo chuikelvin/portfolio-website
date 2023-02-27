@@ -602,6 +602,13 @@ box-shadow:  8px 8px 26px #666666,
 .about__description{
   margin-bottom: var(--mb-4);
   color: var(--first-color-dark);
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  background-color: var(--first-color-lighten);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 .about__img{
@@ -965,6 +972,18 @@ right: 0;
   .contact__container{
     grid-template-columns: repeat(2,1fr);
   }
+
+  .works__img{
+
+    min-width: 340px;
+    max-width: 500px;
+
+    min-height: 245px;
+    max-height: 330px;
+    /* margin: 2rem; */
+  }
+
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -999,6 +1018,16 @@ right: 0;
   }
   .menu{
     width:100%;
+  }
+
+  .works__img{
+
+    min-width: 495px;
+    max-width: 500px;
+
+    min-height: 305px;
+    max-height: 330px;
+    /* margin: 2rem; */
   }
 
 }

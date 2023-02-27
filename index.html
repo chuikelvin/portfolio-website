@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="Kelvin Chui is an all rounded techie. Explore his portfolio and discover his latest projects." />
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/test.css">
@@ -70,7 +72,7 @@
                     </div> -->
                     <div class="flip" id="flipper">
                         <div class="home__img" id="home__img">
-                            <img id="profile__pic" src="assets/img/profile.jpg" alt="Kelvin's profile picture">
+                            <img id="profile__pic" src="assets/img/profile.jpg" alt="Kelvin Chui profile picture">
                         </div>
                         <div class="game" id="game">
                         </div>
@@ -109,9 +111,9 @@
 
             <div class="about__container bg-grid">
                 <div class="about__data">
-                    <p class="about__description">
-                        I am a Mechanical Engineering Technologist by training and a techie at heart. I love designing
-                        and developing new ideas into final products and services. One of my prefered ways of doing this
+                    <h1 class="about__description">
+                        I am a Mechanical Engineering Technologist by training and a techie at heart. <br> I love designing
+                        and developing new ideas into final products and services. <br> One of my prefered ways of doing this
                         is through programming which provides a near infinite canvas to build.
                         <!-- things with functionality and even
                         automation. -->
@@ -121,7 +123,7 @@
                         <!-- I specialize in Frontend development, backend development and database development. -->
                         <br>
                         Some of the technologies I am proficient in are but not limited to:
-                    </p>
+                        </h1>
                     <div class="about__social">
                         <div class="about__tech"> <i class="about__icons bx bxl-python"></i> <span>Python</span></div>
                         <div class="about__tech"> <i class="about__icons bx bxl-django"></i> <span>Django</span></div>
@@ -253,7 +255,10 @@
                     <div class="works__img">
                         <div class="img__container">
                             <!-- <img src="assets/img/plp_dummy.png" alt="plp site preview"> -->
-                            <iframe src="https://www.youtube.com/embed/M30MyXumkyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/M30MyXumkyI" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                         </div>
                         <h3 class=" ">AI mapping to control servo</h3>
                         <div class="works__data works__video">
@@ -276,28 +281,48 @@
                     <div class="works__img">
                         <div class="img__container">
                             <!-- <div style="width:100%;height:480px;background-color:black;text-align:center;"> -->
-                                <video style="height:100%;" controls>
-                                  <source src="https://lh3.googleusercontent.com/i78HzJwFyhS-s6DUMLOxVJHWGPmthyHiFImE9vdx5DYIyBnrBedqu7LmqOna0sQZuq38TPjPlbnMu6ailVxj0XhzJoWlstrx0smy2Don-vDMh5LIIOZR31x3c8KPff_IVB-Mgs1VIkQ=m18" type="video/mp4">
-                                </video>
-                              <!-- </div> -->
-                              
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/N6MylCDRpjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <!-- </div> -->
+
                         </div>
-                        <h3 class=" "><a href="https://photos.app.goo.gl/1buESci52YveQ6js8" target="_blank">CNC embroidery sewing machine (Final Project)</a></h3>
+                        <h3 class=" "><a href="https://photos.app.goo.gl/1buESci52YveQ6js8" target="_blank">CNC
+                                embroidery sewing machine (Final Project)</a></h3>
                         <div class="works__data works__video">
                             <a href="https://thawing-springs-95517.herokuapp.com/" target="_blank">
                                 <i class="bx bx-link-alt works__link"></i>
                                 <span class="works__title">
-                                    Store11 is a fullstack ecommerce web app powered by Python Django.It features
+                                    <!-- Store11 is a fullstack ecommerce web app powered by Python Django.It features
                                     user login and sign up, an active store with products and related details stored in
                                     a
                                     database, add to cart functionality without login (checkout requires login),
                                     checkout
-                                    and order placing with m-pesa daraja payment intergration among others.
+                                    and order placing with m-pesa daraja payment intergration among others. -->
                                 </span>
 
                             </a>
                         </div>
                     </div>
+
+                    <div class="works__img">
+                        <div class="img__container">
+                            <div class="img">
+
+                                <img src="assets/img/pc parts.jpg" alt="PC parts">
+                            </div>
+                        </div>
+                        <h3 class=" ">Personal Technical Projects</h3>
+                        <div class="works__data">
+                            <a href="https://dynalist.io/d/Vd07xYXBYhsPMmczFuPqYWTP" target="_blank">
+                                <i class="bx bx-link-alt works__link"></i>
+                                <span class="works__title">
+                                    These are personal projects that I have worked on over time. Most of them deal with
+                                    electronics and IOT devices.
+                                </span>
+
+                            </a>
+                        </div>
+                    </div>
+
 
                 </div>
             </div>

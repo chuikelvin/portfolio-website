@@ -39,7 +39,7 @@
                                     <div>Home</div>
                                 </a>
                             </div>
-                            </li>
+                        </li>
                         <li class="nav__item"><a href="#about" class="nav__link">
                                 <div>About</div>
                             </a></li>
@@ -83,13 +83,16 @@
                         <span class="home__profession b2">Front-End Developer</span>
                         <span class="home__profession b3">Back-End Developer</span>
                         <span class="home__profession b5">Full stack Developer</span>
+                        <span class="home__profession b6">Mobile app Developer</span>
+                        <span class="home__profession b7">Electronics and Robotics</span>
                     </div>
 
 
                     <div class="home__social">
-                        <a href=" https://github.com/chuikelvin" target="_blank"><i class="home__social-link bx bxl-github"></i></a>
+                        <a href=" https://github.com/chuikelvin" target="_blank"><i
+                                class="home__social-link bx bxl-github"></i></a>
                         <a href="https://www.linkedin.com/in/kelvin-chui/" target="_blank">
-                           <i class="home__social-link bx bxl-linkedin"></i></a>
+                            <i class="home__social-link bx bxl-linkedin"></i></a>
                     </div>
 
                     <a download="Kelvin_Chui.pdf" href="/Kelvin_Chui.pdf" class="button home__button">Download
@@ -191,51 +194,112 @@
         <section class="works section" id="works">
             <span class="section-subtitle"> My portfolio </span>
             <h2 class="section-title">Recent Works</h2>
-            <!-- <div class="tabs">
-                <button class="tab__item act">Software</button>
-                <button class="tab__item">Hardware</button>
-            </div> -->
-            <div class="works__container software bg-grid">
-                <div class="works__img">
-                    <div class="img__container">
-                        <img src="assets/img/plp_dummy.png" alt="plp site preview">
+
+            <div class="tabs">
+                <button class="tab__item tablinks act" onclick="openTab(event,'software')">Software</button>
+                <button class="tab__item tablinks" onclick="openTab(event,'hardware')">Hardware</button>
+            </div>
+            <!-- Tab content -->
+            <div id="software" class="tabcontent">
+                <div class="works__container bg-grid">
+                    <div class="works__img">
+                        <div class="img__container">
+                            <img src="assets/img/plp_dummy.png" alt="plp site preview">
+                        </div>
+                        <h3 class=" ">PLP dummy website</h3>
+                        <div class="works__data">
+                            <a href="https://plp-site-assignment.vercel.app/" target="_blank">
+                                <i class="bx bx-link-alt works__link"></i>
+                                <span class="works__title">
+                                    A Bootstrap assignment in Web Technologies at the Power Learn Project required us to
+                                    create
+                                    a PLP platform where facilitators and student could log in and view their progress.
+                                    Despite
+                                    being a design related assignment I decided to use Javascript to generate
+                                    corresponding
+                                    dummy data and incorporate sessionStorage to temporarily store it while the user was
+                                    accessing the webpages.
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                    <h3 class=" ">PLP dummy website</h3>
-                    <div class="works__data">
-                        <a href="https://plp-site-assignment.vercel.app/" target="_blank">
-                            <i class="bx bx-link-alt works__link"></i>
-                            <span class="works__title">
-                                A Bootstrap assignment in Web Technologies at the Power Learn Project required us to
-                                create
-                                a PLP platform where facilitators and student could log in and view their progress.
-                                Despite
-                                being a design related assignment I decided to use Javascript to generate corresponding
-                                dummy data and incorporate sessionStorage to temporarily store it while the user was
-                                accessing the webpages.
-                            </span>
-                        </a>
+
+                    <div class="works__img">
+                        <div class="img__container">
+                            <img src="assets/img/store11.png" alt="Store11 preview">
+                        </div>
+                        <h3 class=" ">Store11 Ecommerce webapp</h3>
+                        <div class="works__data">
+                            <a href="https://thawing-springs-95517.herokuapp.com/" target="_blank">
+                                <i class="bx bx-link-alt works__link"></i>
+                                <span class="works__title">
+                                    Store11 is a fullstack ecommerce web app powered by Python Django.It features
+                                    user login and sign up, an active store with products and related details stored in
+                                    a
+                                    database, add to cart functionality without login (checkout requires login),
+                                    checkout
+                                    and order placing with m-pesa daraja payment intergration among others.
+                                </span>
+
+                            </a>
+                        </div>
                     </div>
+
                 </div>
-
-                <div class="works__img">
-                    <div class="img__container">
-                        <img src="assets/img/store11.png" alt="Store11 preview">
+            </div>
+            <!-- tabcontent -->
+            <div id="hardware" class="tabcontent">
+                <div class="works__container bg-grid">
+                    <div class="works__img">
+                        <div class="img__container">
+                            <!-- <img src="assets/img/plp_dummy.png" alt="plp site preview"> -->
+                            <iframe src="https://www.youtube.com/embed/M30MyXumkyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <h3 class=" ">AI mapping to control servo</h3>
+                        <div class="works__data works__video">
+                            <a href="https://www.youtube.com/embed/M30MyXumkyI" target="_blank">
+                                <i class="bx bx-link-alt works__link"></i>
+                                <span class="works__title">
+                                    <!-- A Bootstrap assignment in Web Technologies at the Power Learn Project required us to
+                                    create
+                                    a PLP platform where facilitators and student could log in and view their progress.
+                                    Despite
+                                    being a design related assignment I decided to use Javascript to generate
+                                    corresponding
+                                    dummy data and incorporate sessionStorage to temporarily store it while the user was
+                                    accessing the webpages. -->
+                                </span>
+                            </a>
+                        </div>
                     </div>
-                    <h3 class=" ">Store11 Ecommerce webapp</h3>
-                    <div class="works__data">
-                        <a href="https://thawing-springs-95517.herokuapp.com/" target="_blank">
-                            <i class="bx bx-link-alt works__link"></i>
-                            <span class="works__title">
-                                Store11 is a fullstack ecommerce web app powered by Python Django.It features
-                                user login and sign up, an active store with products and related details stored in a
-                                database, add to cart functionality without login (checkout requires login), checkout
-                                and order placing with m-pesa daraja payment intergration among others.
-                            </span>
 
-                        </a>
+                    <div class="works__img">
+                        <div class="img__container">
+                            <!-- <div style="width:100%;height:480px;background-color:black;text-align:center;"> -->
+                                <video style="height:100%;" controls>
+                                  <source src="https://lh3.googleusercontent.com/i78HzJwFyhS-s6DUMLOxVJHWGPmthyHiFImE9vdx5DYIyBnrBedqu7LmqOna0sQZuq38TPjPlbnMu6ailVxj0XhzJoWlstrx0smy2Don-vDMh5LIIOZR31x3c8KPff_IVB-Mgs1VIkQ=m18" type="video/mp4">
+                                </video>
+                              <!-- </div> -->
+                              
+                        </div>
+                        <h3 class=" "><a href="https://photos.app.goo.gl/1buESci52YveQ6js8" target="_blank">CNC embroidery sewing machine (Final Project)</a></h3>
+                        <div class="works__data works__video">
+                            <a href="https://thawing-springs-95517.herokuapp.com/" target="_blank">
+                                <i class="bx bx-link-alt works__link"></i>
+                                <span class="works__title">
+                                    Store11 is a fullstack ecommerce web app powered by Python Django.It features
+                                    user login and sign up, an active store with products and related details stored in
+                                    a
+                                    database, add to cart functionality without login (checkout requires login),
+                                    checkout
+                                    and order placing with m-pesa daraja payment intergration among others.
+                                </span>
+
+                            </a>
+                        </div>
                     </div>
+
                 </div>
-
             </div>
         </section>
 
@@ -251,16 +315,17 @@
                     </h1>
                     <a href="mailto:chuikelvin2@gmail.com?" class="contact__text"><i
                             class="home__social-link bx bx-envelope"></i> chuikelvin2@gmail.com</a>
-                    <h1 class="contact-text">or <br> connect with me via<br> 
-                        </h1> 
+                    <h1 class="contact-text">or <br> connect with me via<br>
+                    </h1>
                     <div class="contact__email">
                         <!-- <h3 class="contact__subtitle">E-mail</h3> -->
                         <!-- <div> -->
 
-                        <a href=" https://github.com/chuikelvin" target="_blank" class="contact__social-link" ><i class="home__social-link  bx bxl-github"></i>github</a>
-                        <a href="https://www.linkedin.com/in/kelvin-chui/" target="_blank" class="contact__social-link" >
+                        <a href=" https://github.com/chuikelvin" target="_blank" class="contact__social-link"><i
+                                class="home__social-link  bx bxl-github"></i>github</a>
+                        <a href="https://www.linkedin.com/in/kelvin-chui/" target="_blank" class="contact__social-link">
                             <i class="home__social-link bx bxl-linkedin"></i>
-                        linkedin</a>
+                            linkedin</a>
                         <!-- <a href="mailto:chuikelvin2@gmail.com?">chuikelvin2@gmail.com</a> -->
                         <!-- </div> -->
                     </div>
@@ -323,12 +388,12 @@
         flipper.onclick = function (e) {
             // target.classList.toggle("paused");
             // console.log(target.style.webkitAnimationName);
-            target.style.webkitAnimationName = target.style.webkitAnimationName=="blue"? 
-            setTimeout(() => {
-                target.style.webkitAnimationName = "rumble"
-            }, 1220)
-                
-                :target.style.webkitAnimationName = "blue";
+            target.style.webkitAnimationName = target.style.webkitAnimationName == "blue" ?
+                setTimeout(() => {
+                    target.style.webkitAnimationName = "rumble"
+                }, 1220)
+
+                : target.style.webkitAnimationName = "blue";
             // console.log(target.style.webkitAnimationName);
             setTimeout(() => {
                 target.classList.toggle("is-flipped");

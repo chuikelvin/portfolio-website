@@ -1046,6 +1046,9 @@ right: 0;
   overflow: hidden;
   margin-bottom: var(--mb-2);
   color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* transition: width 2s, height 2s,;  */
   z-index: 5;
   

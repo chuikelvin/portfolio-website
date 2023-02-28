@@ -169,24 +169,9 @@ container.addEventListener("click", setTheme);
       // workContainer.scrollLeft += event.deltaY;;
 
 
-      workContainers.forEach(workContainer => {
-        // workContainer.addEventListener('wheel', (event) => {
-        //   event.preventDefault();
-        
-          workContainer.scrollLeft += event.deltaY;;
-          // element.scrollBy({
-          //   left: event.deltaY < 0 ? -30 : 30,
-            
-          // });
-        // });
+      workContainers.forEach(workContainer => {      
+          workContainer.scrollLeft += event.deltaY-95;
       });
-
-
-
-      // element.scrollBy({
-      //   left: event.deltaY < 0 ? -30 : 30,
-        
-      // });
     });
   })
 

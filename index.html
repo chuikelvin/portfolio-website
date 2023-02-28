@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta data-n-head="ssr" data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
-    <meta name="description" content="Kelvin Chui is an all rounded techie. Explore his portfolio and discover his latest projects." />
+    <meta name="description"
+        content="Kelvin Chui is an all rounded techie. Explore his portfolio and discover his latest projects." />
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/test.css">
@@ -112,8 +113,10 @@
             <div class="about__container bg-grid">
                 <div class="about__data">
                     <h1 class="about__description">
-                        I am a Mechanical Engineering Technologist by training and a techie at heart. <br> I love designing
-                        and developing new ideas into final products and services. <br> One of my prefered ways of doing this
+                        I am a Mechanical Engineering Technologist by training and a techie at heart. <br> I love
+                        designing
+                        and developing new ideas into final products and services. <br> One of my prefered ways of doing
+                        this
                         is through programming which provides a near infinite canvas to build.
                         <!-- things with functionality and even
                         automation. -->
@@ -123,7 +126,7 @@
                         <!-- I specialize in Frontend development, backend development and database development. -->
                         <br>
                         Some of the technologies I am proficient in are but not limited to:
-                        </h1>
+                    </h1>
                     <div class="about__social">
                         <div class="about__tech"> <i class="about__icons bx bxl-python"></i> <span>Python</span></div>
                         <div class="about__tech"> <i class="about__icons bx bxl-django"></i> <span>Django</span></div>
@@ -231,10 +234,13 @@
                         </div>
                         <h3 class=" ">BuzzNote Mobile Application</h3>
                         <div class="works__data">
-                            <a href="https://play.google.com/store/apps/details?id=com.traffs_ke.BuzzNote" target="_blank">
+                            <a href="https://play.google.com/store/apps/details?id=com.traffs_ke.BuzzNote"
+                                target="_blank">
                                 <i class="bx bx-link-alt works__link"></i>
                                 <span class="works__title">
-                                    BuzzNote is a note taking moblie application built with Flutter.It is heavily inspired by Google keep and helps you stay organized and focused on your goals! With BuzzNote, you can quickly jot down your ideas and manage your tasks with ease.
+                                    BuzzNote is a note taking moblie application built with Flutter.It is heavily
+                                    inspired by Google keep and helps you stay organized and focused on your goals! With
+                                    BuzzNote, you can quickly jot down your ideas and manage your tasks with ease.
                                 </span>
 
                             </a>
@@ -297,7 +303,10 @@
                     <div class="works__img">
                         <div class="img__container">
                             <!-- <div style="width:100%;height:480px;background-color:black;text-align:center;"> -->
-                                <iframe  src="https://www.youtube.com/embed/N6MylCDRpjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/N6MylCDRpjM" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
                             <!-- </div> -->
 
                         </div>
@@ -493,17 +502,46 @@
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(width, height);
+        // console.log(window.innerWidth);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
         target.appendChild(renderer.domElement);
 
-        const geometry = new THREE.BoxGeometry(1, 1, 1);
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        let particleLight = new THREE.Mesh(new THREE.SphereGeometry(4, 8, 8), new THREE.MeshBasicMaterial({ color: 0xffffff }));
+        scene.add(particleLight);
+
+        scene.add(new THREE.AmbientLight(0x00999e,2));
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);
+        directionalLight.position.set(1, -11, 1).normalize();
+        scene.add(directionalLight);
+
+        let alpha = 255, beta = 255, gamma = 255;
+
+        // const diffuseColor = new THREE.Color("hsl(205, 100%, 50%)");
+        0x01d202f
+        const diffuseColor = new THREE.Color(0x01d202f);
+
+        const material = new THREE.MeshPhysicalMaterial({
+            color: diffuseColor,
+            metalness: 0,
+            roughness: 0.5,
+            clearcoat: 1.0 - alpha,
+            clearcoatRoughness: 1.0 - beta,
+            reflectivity: 1.0 - gamma,
+            // envMap: ( index % 2 ) == 1 ? texture : null
+        });
+
+        // const geometry = new THREE.BoxGeometry(1, 1, 1);
+        const geometry = new THREE.SphereGeometry(0.6, 32, 16);
+        // const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
         const cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
 
         camera.position.z = 5;
+
+        const pointLight = new THREE.PointLight(0xffffff, 0.4, 800);
+        particleLight.add(pointLight);
 
         function animate() {
             requestAnimationFrame(animate);
@@ -511,8 +549,30 @@
             cube.rotation.x += 0.01;
             cube.rotation.y += 0.01;
 
-            renderer.render(scene, camera);
+            // renderer.render(scene, camera);
+            render();
         };
+
+        function render() {
+            const timer = Date.now() * 0.00025;
+
+            //camera.position.x = Math.cos( timer ) * 800;
+            //camera.position.z = Math.sin( timer ) * 800;
+
+            // camera.lookAt( scene.position );
+
+            particleLight.position.x = Math.sin(timer * 7) * 300;
+            particleLight.position.y = Math.cos(timer * 5) * 400;
+            particleLight.position.z = Math.cos(timer * 3) * 300;
+
+            directionalLight.position.x = Math.cos(timer * 3) * 300;
+            directionalLight.position.y = Math.cos(timer * 6) * 400;
+            directionalLight.position.z = Math.sin(timer * 8) * 300;
+
+            renderer.render(scene, camera);
+
+
+        }
 
         animate();
 

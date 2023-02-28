@@ -17,14 +17,18 @@
     outline: none;
     border: none;
     font-size: 20px;
-    width:400px;
+    max-width:400px;
+    width:100%;
     height: 48px;
     padding:5px 6px;
     border-top-right-radius:10px;
     border-top-left-radius:10px;
-    background-color: #dfdfdf;
-    border:2px solid #1d202f;
+    border-bottom-right-radius:4px;
+    border-bottom-left-radius:4px;
+    background-color: #dfdfdf00;
+    /* border:2px solid #1d202f; */
     border-bottom: white;
+    color: var(--first-color);
 }
 .tab__item:hover {
     color: #dfdfdf;
@@ -35,6 +39,8 @@
     color: #dfdfdf;
     background-color:#1d202f;
     display: block!important;
+    /* background: linear-gradient(145deg, #000000, #2a3442);
+    box-shadow: 8px 8px 17px #080a0d, -8px -8px 17px #1e2633; */
 }
 
 .box {

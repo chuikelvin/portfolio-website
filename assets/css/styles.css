@@ -1109,6 +1109,7 @@ right: 0;
   /* border: 1px solid #ccc;
   border-top: none; */
   animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  /* cursor: ew-resize; */
 }
 
 /* Go from zero to full opacity */

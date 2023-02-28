@@ -144,3 +144,73 @@ container.addEventListener("click", setTheme);
   }
 
   document.querySelector(".act").click();
+
+
+  const workContainers = document.querySelectorAll(".works__container");
+
+  workContainers.forEach(workContainer => {
+    workContainer.addEventListener('wheel', (event) => {
+      event.preventDefault();
+    
+      workContainer.scrollLeft += event.deltaY;;
+      // element.scrollBy({
+      //   left: event.deltaY < 0 ? -30 : 30,
+        
+      // });
+    });
+  });
+
+
+  const tabs = document.querySelectorAll(".tabcontent");
+  tabs.forEach(tab => {
+    tab.addEventListener('wheel', (event) => {
+      event.preventDefault();
+    
+      // workContainer.scrollLeft += event.deltaY;;
+
+
+      workContainers.forEach(workContainer => {
+        // workContainer.addEventListener('wheel', (event) => {
+        //   event.preventDefault();
+        
+          workContainer.scrollLeft += event.deltaY;;
+          // element.scrollBy({
+          //   left: event.deltaY < 0 ? -30 : 30,
+            
+          // });
+        // });
+      });
+
+
+
+      // element.scrollBy({
+      //   left: event.deltaY < 0 ? -30 : 30,
+        
+      // });
+    });
+  })
+
+
+
+
+  // for (const workContainer  in workContainers) {
+  //   console.log(workContainers);
+// workContainer.addEventListener('wheel', (event) => {
+//   event.preventDefault();
+
+//   workContainer.scrollLeft += event.deltaY;;
+//   // element.scrollBy({
+//   //   left: event.deltaY < 0 ? -30 : 30,
+    
+//   // });
+// });
+  // }
+// element.addEventListener('wheel', (event) => {
+//   event.preventDefault();
+
+//   element.scrollLeft += event.deltaY;;
+//   // element.scrollBy({
+//   //   left: event.deltaY < 0 ? -30 : 30,
+    
+//   // });
+// });

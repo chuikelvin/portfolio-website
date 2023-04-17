@@ -796,6 +796,7 @@ text-align:center;
 }
 .contact-title {
   font-size: var(--h1-font-size);
+  font-size: 1.5rem;
   /* color: var(--first-color); */
   font-weight: 600;
   /* margin-bottom: var(--mb-3); */
